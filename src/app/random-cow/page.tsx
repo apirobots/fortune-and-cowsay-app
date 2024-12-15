@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from "react";
-import { getCowsay } from "@/services/api";
+import { getRandomCow } from "@/services/api";
 import Navigation from "@/components/Navigation";
 import LoadingCow from "@/components/LoadingCow";
 import LoadingSpinner from "@/components/LoadingSpinner";
@@ -10,10 +10,10 @@ export default function CowsayPage() {
   const [cowsay, setCowsay] = useState<string>('');
   const [loading, setLoading] = useState(true);
 
-  const fetchCowsay = async () => {
+  const fetchRandomCow = async () => {
     setLoading(true);
     try {
-      const data = await getCowsay();
+      const data = await getRandomCow();
       setCowsay(data.fortune);
     } catch (error) {
       console.error('Error fetching cowsay:', error);
@@ -22,7 +22,7 @@ export default function CowsayPage() {
   };
 
   useEffect(() => {
-    fetchCowsay();
+    fetchRandomCow();
   }, []);
 
   return (
@@ -40,7 +40,7 @@ export default function CowsayPage() {
         </div>
 
         <button 
-                  onClick={fetchCowsay}
+                  onClick={fetchRandomCow}
                   className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
                   disabled={loading}
                 >
