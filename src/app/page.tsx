@@ -44,7 +44,7 @@ export default function FortunePage() {
           disabled={loading}
         >
           {loading && <LoadingSpinner />}
-          {loading ? 'Loading...' : 'Get Another Fortune'}
+          {loading ? 'Loading...' : 'Get Another Quote'}
         </button>
       </main>
     </div>

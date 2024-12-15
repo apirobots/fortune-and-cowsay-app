@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { getCowsay } from "@/services/api";
 import Navigation from "@/components/Navigation";
 import LoadingCow from "@/components/LoadingCow";
+import LoadingSpinner from "@/components/LoadingSpinner";
 
 export default function CowsayPage() {
   const [cowsay, setCowsay] = useState<string>('');
@@ -39,12 +40,13 @@ export default function CowsayPage() {
         </div>
 
         <button 
-          onClick={fetchCowsay}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          disabled={loading}
-        >
-          {loading ? 'Loading...' : 'Get Another Fortune Quote'}
-        </button>
+                  onClick={fetchCowsay}
+                  className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
+                  disabled={loading}
+                >
+                  {loading && <LoadingSpinner />}
+                  {loading ? 'Loading...' : 'Get Another Quote'}
+                </button>
       </main>
     </div>
   );
