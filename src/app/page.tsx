@@ -27,7 +27,7 @@ export default function FortunePage() {
     <div className="flex min-h-screen flex-col items-center justify-center p-8">
       <main className="flex flex-col items-center gap-8 max-w-xl">
         <Navigation />
-        <h1 className="text-3xl font-bold">Fortune Cookie</h1>
+        <h1 className="text-3xl font-bold">Fortune Quote</h1>
         
         <div className="w-full p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
           {loading ? (
@@ -42,7 +42,7 @@ export default function FortunePage() {
           className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           disabled={loading}
         >
-          {loading ? 'Loading...' : 'Get Another Fortune'}
+          {loading ? 'Loading...' : 'Get Another Fortune Quote'}
         </button>
       </main>
     </div>

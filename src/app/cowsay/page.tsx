@@ -42,7 +42,7 @@ export default function CowsayPage() {
           className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           disabled={loading}
         >
-          {loading ? 'Loading...' : 'Get Another Cowsay'}
+          {loading ? 'Loading...' : 'Get Another Fortune Quote'}
         </button>
       </main>
     </div>
