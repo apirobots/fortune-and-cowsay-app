@@ -28,7 +28,7 @@ export default function DataFetcher({ fetchData, title }: DataFetcherProps) {
 
     return (
         <div className="flex flex-col items-center justify-center p-8">
-            <main className="flex flex-col items-center gap-8 max-w-xl">
+            <main className="flex flex-col items-center gap-8 max-w-3xl"> {/* Increased max-width */}
                 <h1 className="text-3xl font-bold">{title}</h1>
 
                 <div className="w-full p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
