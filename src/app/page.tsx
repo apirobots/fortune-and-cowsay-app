@@ -3,6 +3,9 @@
 import { useEffect, useState } from "react";
 import { getFortune } from "@/services/api";
 import Navigation from "@/components/Navigation";
+import LoadingSpinner from "@/components/LoadingSpinner";
+import { waitForDebugger } from "inspector";
+import LoadingCow from "@/components/LoadingCow";
 
 export default function FortunePage() {
   const [fortune, setFortune] = useState<string>('');
@@ -30,19 +33,18 @@ export default function FortunePage() {
         <h1 className="text-3xl font-bold">Fortune Quote</h1>
         
         <div className="w-full p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-          {loading ? (
-            <div className="animate-pulse h-20 bg-gray-200 dark:bg-gray-700 rounded"></div>
-          ) : (
-            <p className="text-lg whitespace-pre-wrap">{fortune}</p>
-          )}
+          {loading 
+            ? <LoadingCow /> 
+            :<p className="text-lg whitespace-pre-wrap">{fortune}</p>}
         </div>
 
         <button 
           onClick={fetchFortune}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
           disabled={loading}
         >
-          {loading ? 'Loading...' : 'Get Another Fortune Quote'}
+          {loading && <LoadingSpinner />}
+          {loading ? 'Loading...' : 'Get Another Fortune'}
         </button>
       </main>
     </div>

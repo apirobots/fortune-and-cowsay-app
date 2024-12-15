@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getCowsay } from "@/services/api";
 import Navigation from "@/components/Navigation";
+import LoadingCow from "@/components/LoadingCow";
 
 export default function CowsayPage() {
   const [cowsay, setCowsay] = useState<string>('');
@@ -31,7 +32,7 @@ export default function CowsayPage() {
         
         <div className="w-full p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
           {loading ? (
-            <div className="animate-pulse h-20 bg-gray-200 dark:bg-gray-700 rounded"></div>
+            <LoadingCow />
           ) : (
             <pre className="font-mono text-sm whitespace-pre-wrap">{cowsay}</pre>
           )}
