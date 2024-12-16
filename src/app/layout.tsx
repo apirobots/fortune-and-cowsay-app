@@ -31,7 +31,7 @@ export default function RootLayout({
         <header className="bg-blue-600 text-white py-4">
             <div className="container mx-auto text-center">
                 <h1 className="text-2xl font-bold">Fortune + Cowsay Quote Generator</h1>
-                <p className="text-sm mt-2">
+                <p className="text-sm mt-2 m-2">
                     Fortune is a simple program that displays a random message from a database of quotations. It was
                     originally written by Ken Arnold in the 1970s. Cowsay is a program that generates an ASCII picture
                     of a cow with a message, created by Tony Monroe in 1999.
