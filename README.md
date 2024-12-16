@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Description
+
+This application provides fun and entertaining quotes and sayings using the Fortune and Cowsay API. Users can fetch random fortunes and display them in a cowsay format.
+
 ## Getting Started
 
 First, run the development server:
