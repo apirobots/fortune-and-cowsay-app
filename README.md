@@ -4,6 +4,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 This application provides fun and entertaining quotes and sayings using the Fortune and Cowsay API. Users can fetch random fortunes and display them in a cowsay format.
 
+## API Key
+
+Get your API key for the Fortune and Cowsay API from [RapidAPI](https://v2.rapidapi.com/apirobotssquad-apirobotssquad-default/api/fortune-and-cowsay-api-by-apirobots).
+
 ## Getting Started
 
 First, run the development server:
