@@ -1380,6 +1380,11 @@ foreground-child@^3.1.0:
     cross-spawn "^7.0.0"
     signal-exit "^4.0.1"
 
+fork-me-github@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/fork-me-github/-/fork-me-github-1.2.0.tgz#168634ad7909925329f1142702cd009a2b4de5e0"
+  integrity sha512-CvNytGJCD+Dsn31iImCZFwxwmGnImTYiEJz0WR7OzFof4OKBLzc0P/AyvX1CKysZx/Z0WRMlgMDzxl2LrFtaHg==
+
 fsevents@~2.3.2:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
