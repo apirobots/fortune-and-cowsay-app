@@ -1,0 +1,9 @@
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build]
+  command = "yarn next build"
+  functions = "netlify/functions"
+  publish = ".next"
+
+  ## more info on configuring this file: https://ntl.fyi/file-based-build-config
